@@ -1,31 +1,35 @@
-function fibonacciNumbers(amount) {
-	//amount is how many different numbers are returned
-
-	var hold = 0;
+//n is returned array size
+function fibonacci(n) {
 	var total = 1;
-	var previous = 0;
+	var previousTotal = 0;
+	var fibonacciNumbers = [];
+	var temp = 0;
 
-	for(var i = 1; i <= amount; i++) {
-		hold = total;
-		total = total + previous;
-		previous = hold;
+	for(var i = 1; i <= n; i++) {
+		temp = total;
+		total += previousTotal;
+		previousTotal = temp;
 
-		console.log(total);
+		fibonacciNumbers.push(total);
 	}
+	return fibonacciNumbers;
 }
 
-function fibonacciUpTo(limit) {
-	//limit stops numbers being returned over a certain value
-
-	var hold = 0;
+//n is value returned array should not exceed
+function evenFibonacci(n) {
 	var total = 1;
-	var previous = 0;
+	var previousTotal = 0;
+	var evenSum = 0;
+	var temp = 0;
 
-	while(total + previous < limit) {
-		hold = total;
-		total = total + previous;
-		previous = hold;
+	while(total + previousTotal < n) {
+		temp = total; 
+		total = total + previousTotal; 
+		previousTotal = temp;
 
-		console.log(total);
-	} 
+		if(total % 2 == 0) {
+			evenSum += total;
+		}
+	}
+	return evenSum;
 }
