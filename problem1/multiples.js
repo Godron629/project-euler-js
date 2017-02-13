@@ -1,6 +1,6 @@
 /*a and b are multiples to test and 
 c is the upper limit of returned values*/
-function multiples(a, b, c) {
+function multiplesList(a, b, c) {
 	var multipleList = [];
 
 	for(var i = 1; i <= c; i++) {
