@@ -1,5 +1,3 @@
-/*a and b are multiples to test and 
-c is the upper limit of returned values*/
 function multiplesList(a, b, c) {
 	var multipleList = [];
 
@@ -20,4 +18,11 @@ function multiplesSum(a, b, c) {
 		}
 	}
 	return multiplesSum;
+}
+
+function test() {
+	var fruits = [];
+	fruits.push('Apple', 'Banana', 'Peach');
+
+	console.log(fruits.length);
 }
